@@ -2,7 +2,8 @@ const Discord =  require("discord.js")
 const { MessageEmbed } = require('discord.js');
 const client = new Discord.Client({ intents: 32767 });
 const talkedRecently = new Set();
-client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
+const token = process.env.BOT_TOKEN;
+//client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
 client.on("ready", message => {
     console.log("Bot jest online")
     client.user.setActivity("Nameless Hunters", {
@@ -115,7 +116,7 @@ client.on("messageCreate", async(message) => {
         
     }
 })
-
+client.login(process.env.token);
 
 function sleep(ms) {
     return new Promise((resolve) => {
