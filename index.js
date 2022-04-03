@@ -2,7 +2,7 @@ const Discord =  require("discord.js")
 const { MessageEmbed } = require('discord.js');
 const client = new Discord.Client({ intents: 32767 });
 const talkedRecently = new Set();
-
+client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
 client.on("ready", message => {
     console.log("Bot jest online")
     client.user.setActivity("Nameless Hunters", {
@@ -115,7 +115,7 @@ client.on("messageCreate", async(message) => {
         
     }
 })
-client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.vjGDB6_Uh7MvsD-UIJTR-tv3M0w")
+
 
 function sleep(ms) {
     return new Promise((resolve) => {
