@@ -15,11 +15,11 @@ client.on("ready", message => {
 client.on("messageCreate", async(message) => {
  
   if(message.content === `mars od tyłu to sram`){
-    console.log("mars od tyłu to sram")
+    console.log("mars od tyłu to sram");
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
-    console.log("wywołanie braterskiej")
+    console.log("wywołanie braterskiej");
     message.channel.send("Dokładnie " + message.members.user.username + "! Jebać braterską odbytnice!");
   }
 
