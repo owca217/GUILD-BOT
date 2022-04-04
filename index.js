@@ -81,6 +81,11 @@ client.on("messageCreate", async(message) => {
           talkedRecently.delete(message.author.id);
         }, 300000);
     }}
+
+    if(message.content === `mars od tyłu to sram`){
+      message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
+    }
+
     }
 
     if(message.content === `${prefix} clear`){
