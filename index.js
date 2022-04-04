@@ -18,7 +18,7 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
     const prefix = "!q"
-    if(!message.content.startsWith(prefix)) return;
+    //if(!message.content.startsWith(prefix)) return;
     //if(!message.member.permissions.has("ADMINISTRATOR")) return message.member.user.send(`BOT IS CURRENTLY UNDER CONSTRUCTION WIĘC NIE UŻYWAJ TYCH KOMEND!!! Grrr.... :angry:`);
 
 
