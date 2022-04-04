@@ -14,6 +14,9 @@ client.on("ready", message => {
       
 client.on("messageCreate", async(message) => {
  
+  if(message.content === `mars od tyłu to sram`){
+    message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
+  }
     const prefix = "!q"
     if(!message.content.startsWith(prefix)) return;
     //if(!message.member.permissions.has("ADMINISTRATOR")) return message.member.user.send(`BOT IS CURRENTLY UNDER CONSTRUCTION WIĘC NIE UŻYWAJ TYCH KOMEND!!! Grrr.... :angry:`);
@@ -82,9 +85,7 @@ client.on("messageCreate", async(message) => {
         }, 300000);
     }}
 
-    if(message.content === `mars od tyłu to sram`){
-      message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
-    }
+    
 
     }
 
