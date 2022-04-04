@@ -20,7 +20,7 @@ client.on("messageCreate", async(message) => {
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
     console.log("wywołanie braterskiej");
-    message.channel.send("Dokładnie " + message.members.user.username + "! Jebać braterską odbytnice!");
+    message.channel.send("Dokładnie " + message.user.username + "! Jebać braterską odbytnice!");
   }
 
     const prefix = "!q"
