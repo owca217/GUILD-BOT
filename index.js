@@ -20,7 +20,7 @@ client.on("messageCreate", async(message) => {
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
     console.log("ODBYTNICA!");
-    message.react(':regional_indicator_o:');
+    message.react(regional_indicator_o);
   }
 
     const prefix = "!q"
