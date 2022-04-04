@@ -18,6 +18,7 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
+    console.log("wywołanie braterskiej")
     message.channel.send("Dokładnie " + message.members.user.username + "! Jebać braterską odbytnice!");
   }
 
