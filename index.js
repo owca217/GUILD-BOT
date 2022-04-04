@@ -17,6 +17,10 @@ client.on("messageCreate", async(message) => {
   if(message.content === `mars od tyłu to sram`){
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
+  if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
+    message.channel.send("Dokładnie " + message.members.user.username + "! Jebać braterską odbytnice!");
+  }
+
     const prefix = "!q"
     //if(!message.content.startsWith(prefix)) return;
     //if(!message.member.permissions.has("ADMINISTRATOR")) return message.member.user.send(`BOT IS CURRENTLY UNDER CONSTRUCTION WIĘC NIE UŻYWAJ TYCH KOMEND!!! Grrr.... :angry:`);
