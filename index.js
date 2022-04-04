@@ -19,8 +19,8 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
-    console.log("wywołanie braterskiej");
-    message.channel.send("Dokładnie " + message.user.username + "! Jebać braterską odbytnice!");
+    console.log("ODBYTNICA!");
+    message.react(':regional_indicator_o:');
   }
 
     const prefix = "!q"
