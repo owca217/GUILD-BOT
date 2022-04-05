@@ -18,6 +18,11 @@ client.on("messageCreate", async(message) => {
     console.log("mars od tyłu to sram");
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
+
+  if(message.content === `!hater`){
+    message.channel.bulkDelete(1);
+    message.channel.send( {files: ['./memes/hatermp4']})
+  }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
     console.log("ODBYTNICA!");
     //message.react('🅾️');
