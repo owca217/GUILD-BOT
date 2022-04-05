@@ -22,6 +22,13 @@ client.on("messageCreate", async(message) => {
     console.log("ODBYTNICA!");
     message.react('🅾️');
     message.react('Ⓞ');
+    message.react('🅑');
+    message.react('🅨');
+    message.react('🅣');
+    message.react('🅝');
+    message.react('🅘');
+    message.react('🅒');
+    message.react('🅐');
     
   }
 
