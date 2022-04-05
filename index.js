@@ -22,7 +22,7 @@ client.on("messageCreate", async(message) => {
   if(message.content === `!hater`){
     console.log("HATER");
     message.channel.bulkDelete(1);
-    message.channel.send( {files: ['./memes/hatermp4']});
+    message.channel.send( {files: ['./memes/hater.mp4']});
   }
   if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
     console.log("ODBYTNICA!");
