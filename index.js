@@ -1,7 +1,7 @@
 const Discord =  require("discord.js")
 const { MessageEmbed } = require('discord.js');
 const client = new Discord.Client({ intents: 32767 });
-const got = require('got');
+const got = require("got");
 const talkedRecently = new Set();
 const token = process.env.BOT_TOKEN;
 //client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
