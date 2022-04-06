@@ -21,6 +21,8 @@ client.on("messageCreate", async(message) => {
   }
 
   if (message.content === `${prefix} meme`) {
+    message.channel.bulkDelete(1);
+    console.log("MEME");
     const embed = new Discord.MessageEmbed()
     got('https://www.reddit.com/r/memes/random/.json').then(response => {
         let content = JSON.parse(response.body);
