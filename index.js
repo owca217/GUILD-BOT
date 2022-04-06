@@ -20,32 +20,12 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
 
-  if (message.content === `${prefix} meme`) {
-    message.channel.bulkDelete(1);
-    console.log("MEME");
-    const embed = new Discord.MessageEmbed()
-    got('https://www.reddit.com/r/memes/random/.json').then(response => {
-        let content = JSON.parse(response.body);
-        let permalink = content[0].data.children[0].data.permalink;
-        let memeUrl = `https://reddit.com${permalink}`;
-        let memeImage = content[0].data.children[0].data.url;
-        let memeTitle = content[0].data.children[0].data.title;
-        let memeUpvotes = content[0].data.children[0].data.ups;
-        let memeDownvotes = content[0].data.children[0].data.downs;
-        let memeNumComments = content[0].data.children[0].data.num_comments;
-        embed.setTitle(`${memeTitle}`)
-        embed.setURL(`${memeUrl}`)
-        embed.setImage(memeImage)
-        embed.setColor('RANDOM')
-        embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`)
-        message.channel.send(embed);
-    })
-}
 
-  if(message.content === `!hater`){
+
+  if(message.content === `!1`){
     console.log("HATER");
     message.channel.bulkDelete(1);
-    message.channel.send( {files: ['./memes/hater.mp4']});
+    message.channel.send( {files: ['./memes/1.jpg']});
   }
 
     const prefix = "!q"
