@@ -1,6 +1,7 @@
 const Discord =  require("discord.js")
 const { MessageEmbed } = require('discord.js');
 const client = new Discord.Client({ intents: 32767 });
+const got = require('got');
 const talkedRecently = new Set();
 const token = process.env.BOT_TOKEN;
 //client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
@@ -19,23 +20,30 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
 
+  if (message.content === `${prefix} meme`) {
+    const embed = new Discord.MessageEmbed()
+    got('https://www.reddit.com/r/memes/random/.json').then(response => {
+        let content = JSON.parse(response.body);
+        let permalink = content[0].data.children[0].data.permalink;
+        let memeUrl = `https://reddit.com${permalink}`;
+        let memeImage = content[0].data.children[0].data.url;
+        let memeTitle = content[0].data.children[0].data.title;
+        let memeUpvotes = content[0].data.children[0].data.ups;
+        let memeDownvotes = content[0].data.children[0].data.downs;
+        let memeNumComments = content[0].data.children[0].data.num_comments;
+        embed.setTitle(`${memeTitle}`)
+        embed.setURL(`${memeUrl}`)
+        embed.setImage(memeImage)
+        embed.setColor('RANDOM')
+        embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`)
+        message.channel.send(embed);
+    })
+}
+
   if(message.content === `!hater`){
     console.log("HATER");
     message.channel.bulkDelete(1);
     message.channel.send( {files: ['./memes/hater.mp4']});
-  }
-  if(message.content.includes("braterska") || message.content.includes("braterską") || message.content.includes("braterskiej")){
-    console.log("ODBYTNICA!");
-    //message.react('🅾️');
-    //message.react('🅳');
-    //message.react('🅑');
-    //message.react('🅨');
-    //message.react('🅣');
-    //message.react('🅝');
-    //message.react('🅘');
-    //message.react('🅒');
-    //message.react('🅐');
-    
   }
 
     const prefix = "!q"
