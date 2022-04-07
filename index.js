@@ -16,7 +16,7 @@ client.on("messageCreate", async(message) => {
  
   if(message.content === `mars od tyłu to sram`){
     console.log("mars od tyłu to sram");
-    message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
+    //message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
   }
 
 
