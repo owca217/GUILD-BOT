@@ -15,13 +15,13 @@ client.on("ready", message => {
 client.on("messageCreate", async(message) => {
  
   if(message.content === `mars od tyłu to sram`){
-    console.log("mars od tyłu to sram" + message.member.user.id);
+    console.log("mars od tyłu to sram" + message.member.user.username);
     if(talkedRecently.has(message.author.id)) { message.channel.bulkDelete(1); message.member.user.send("Wiem jak bardzo śmieszne jest że Braterska jest jebana od tyłu ale nie musimy tym zaśmiecać discorda :wink:, żeby nasz discord gildyjny był w stanie utrzymać jebanie Braterskiej, można użyć tej komendy raz na 24h")
     } else {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
     talkedRecently.add(message.author.id);
     setTimeout(() => {
-    talkedRecently.delete(message.author.id);
+    talkedRecently.delete(message.author.id;
         }, 86400000);
     }
   }
