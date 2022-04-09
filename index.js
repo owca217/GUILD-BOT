@@ -21,7 +21,7 @@ client.on("messageCreate", async(message) => {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
     talkedRecently.add(message.author.id);
     setTimeout(() => {
-    talkedRecently.delete(message.author.id;
+    talkedRecently.delete(message.author.id);
         }, 86400000);
     }
   }
