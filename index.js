@@ -12,10 +12,21 @@ client.on("ready", message => {
     
       })
       
+
+//// the parameter of the callback function is a `GuildMember` class, so name the variable
+//// something reasonable like 'guildMember', not 'guildMemberAdd'
+//client.on('guildMemberAdd', member => {
+  //// Set the member's roles to a single role
+//  member.user.
+//});
+
+
+
+
 client.on("messageCreate", async(message) => {
  
   if(message.content === `mars od tyłu to sram`){
-    console.log("mars od tyłu to sram. Nick:  " + message.member.user.username);
+    console.log("mars od tyłu to sram. Nick: ` " + message.member.user.username);
     if(talkedRecently.has(message.author.id)) { message.channel.bulkDelete(1); message.member.user.send("Wiem jak bardzo śmieszne jest że Braterska jest jebana od tyłu ale nie musimy tym zaśmiecać discorda :wink:, żeby nasz discord gildyjny był w stanie utrzymać jebanie Braterskiej, można użyć tej komendy raz na 24h")
     } else {
     message.channel.send("A Braterska od tyłu to jest jebana w dupe ;)");
