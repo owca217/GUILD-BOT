@@ -3,6 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const client = new Discord.Client({ intents: 32767 });
 const talkedRecently = new Set();
 const token = process.env.BOT_TOKEN;
+const prefix = "!q"
 //client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.k8KEzvqWnzS9TUd6arOVsFtPz0g")
 client.on("ready", message => {
     console.log("Bot jest online")
@@ -37,8 +38,7 @@ client.on("messageCreate", async(message) => {
     }
   }
 
-  if(message.content === `${prefix} guild`)
-  {
+  if(message.content === `${prefix} guild`){
     message.channel.send("Server id: " + message.guild.id);
   }
 
@@ -48,7 +48,7 @@ client.on("messageCreate", async(message) => {
     message.channel.send( {files: ['./memes/1.jpg']});
   }
 
-    const prefix = "!q"
+    
     //if(!message.content.startsWith(prefix)) return;
     //if(!message.member.permissions.has("ADMINISTRATOR")) return message.member.user.send(`BOT IS CURRENTLY UNDER CONSTRUCTION WIĘC NIE UŻYWAJ TYCH KOMEND!!! Grrr.... :angry:`);
 
