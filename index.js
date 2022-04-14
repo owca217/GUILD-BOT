@@ -37,7 +37,10 @@ client.on("messageCreate", async(message) => {
     }
   }
 
-
+  if(message.content === `${prefix} guild`)
+  {
+    message.channel.send("Server id: " + message.guild.id);
+  }
 
   if(message.content === `!1`){
     console.log("HATER");
