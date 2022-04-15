@@ -10,15 +10,15 @@ client.on("ready", message => {
     client.user.setActivity("Nameless Hunters", {
       type: "PLAYING"
     })
-    const guildId = '7915364807014772786'
+  /*  const guildId = '7915364807014772786'
     const guild = client.guilds.cache.get(guildId)
     let commands
 
     if(guild){
       commands = guild.commands;
-    } else {
+    } else { */
       commands = client.application.commands;
-    }
+   // }
     commands.create({
       name: 'ping',
       description: 'ping pong!'
