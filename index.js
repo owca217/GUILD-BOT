@@ -10,7 +10,30 @@ client.on("ready", message => {
     client.user.setActivity("Nameless Hunters", {
       type: "PLAYING"
     })
-    
+    const guildId = '7915364807014772786'
+    const guild = client.guilds.cache.get(guildId)
+    let commands
+
+    if(guild){
+      commands = guild.commands;
+    } else {
+      commands = client.application.commands;
+    }
+    commands.create({
+      name: 'ping1',
+      description: 'ping pong!'
+  })
+    commands.create({
+      name: 'zebranie',
+      description: 'Przenosi osoby na kanał zebranie',
+      options: [{
+          name: 'rola',
+          description: 'przenosi tylko osoby posiadające tą role',
+          required: false,
+          type: Discord.Constants.ApplicationCommandOptionTypes.ROLE
+      }]
+  })
+
       })
       
 
@@ -21,7 +44,45 @@ client.on("ready", message => {
 //  member.user.
 //});
 
+client.on('interactionCreate', async (commandlistener) => {
+  if(!commandlistener.isCommand()){ return;}
+  console.log(commandlistener.commandName)
+      if(commandlistener.commandName === 'ping'){
+          console.log("ping");
+          commandlistener.reply({
+              content:'pong',
+              ephemeral: true,
+          })
+      }
+  if(commandlistener.commandName === 'zebranie'){
+    console.log("GET ROLE: " + commandlistener.options.getRole('rola'))
+    const roleid = commandlistener.options.getRole('rola')
+    const channel = "959737866634801152";
+    if(!commandlistener.member.permissions.has("ADMINISTRATOR")) return commandlistener.reply(`nie masz uprawnień do tej komendy!`);
+    if(roleid!=null){
+    commandlistener.guild.members.cache.forEach(member => {
+        console.log(member.user.username + " / " + member.voice.channel + " / " + member.roles.cache.has(roleid.id) + "  /")
+        if(member.voice.channel && member.roles.cache.has(roleid.id)){
+        // if(member.id != message.member.id)
+        member.voice.setChannel(channel);
+        console.log(member.user.username)}
+      })
+    } else {
+        commandlistener.guild.members.cache.forEach(member => {
+            if(member.voice.channel && member.roles.cache.has("959767316353138688")){
+            // if(member.id != message.member.id)
+            member.voice.setChannel(channel);
+            console.log("ZEBRANIE : "+member.user.username)}
+        })}
+      commandlistener.reply({
+        content:'Osoby przeniesione!',
+        ephemeral: true,
+    })
 
+}
+
+
+} )
 
 
 client.on("messageCreate", async(message) => {
