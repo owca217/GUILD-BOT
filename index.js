@@ -20,7 +20,7 @@ client.on("ready", message => {
       commands = client.application.commands;
     }
     commands.create({
-      name: 'ping1',
+      name: 'ping',
       description: 'ping pong!'
   })
     commands.create({
