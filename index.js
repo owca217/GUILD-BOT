@@ -99,8 +99,9 @@ client.on("messageCreate", async(message) => {
     }
   }
 
-  if(message.content === `${prefix} guild`){
-    message.channel.send("Server id: " + message.guild.id);
+  if(message.content === `${prefix} bye`){
+    message.channel.bulkDelete(1);
+    message.channel.send("Baj Baj everyone :blush:. Pamiętajcie, jebać Braterską i Śmi3ćtrue :smile::wave:");
   }
 
   if(message.content === `!1`){
