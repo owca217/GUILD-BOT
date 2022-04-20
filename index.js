@@ -43,7 +43,7 @@ client.on("ready", message => {
   //// Set the member's roles to a single role
 //  member.user.
 //});
-
+/*
 client.on('interactionCreate', async (commandlistener) => {
   if(!commandlistener.isCommand()){ return;}
   console.log(commandlistener.commandName)
@@ -83,7 +83,7 @@ client.on('interactionCreate', async (commandlistener) => {
 
 
 } )
-
+*/
 
 client.on("messageCreate", async(message) => {
  
