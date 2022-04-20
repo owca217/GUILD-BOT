@@ -99,7 +99,7 @@ client.on("messageCreate", async(message) => {
     }
   }
 //
-  if(message.content === `${prefix} bye`){
+  if(message.content === `bye`){
     message.channel.bulkDelete(1);
     message.channel.send("Baj Baj everyone :blush:. Pamiętajcie, jebać Braterską i Śmi3ćtrue :smile::wave:");
   }
