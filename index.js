@@ -77,6 +77,12 @@ client.on("messageCreate", async(message) => {
     }
   }
 //
+  if(message.content === `nameless tank`){
+
+
+
+  }
+
   if(message.content === `bye`){
     message.channel.bulkDelete(1);
     message.channel.send("Baj Baj everyone :blush:. Pamiętajcie, jebać Braterską i Śmi3ćtrue :smile::wave:");
@@ -85,7 +91,7 @@ client.on("messageCreate", async(message) => {
   if(message.content === `!1`){
     console.log("HATER");
     message.channel.bulkDelete(1);
-    message.channel.send( {files: ['./memes/1.jpg']});
+    message.channel.send(":NATURE:");
   }
 
     
@@ -159,7 +165,7 @@ client.on("messageCreate", async(message) => {
     
 
     }
-
+    if(message.content === `${prefix} ` )
     if(message.content === `${prefix} clear`){
       if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send(`<@`+message.member.user.id+`> nie masz uprawnień do tej komendy!`);
       message.channel.bulkDelete(100)
