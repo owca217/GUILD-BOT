@@ -7,6 +7,7 @@ const prefix = "!q"
 //client.login("OTU5NzIxNDc1MDA5NTc2OTkw.YkgARg.vHUAAgn50CWlCjXmBmB_AZAphfU")
 client.on("ready", message => {
     console.log("Bot jest online")
+
     client.user.setActivity("Nameless Hunters", {
       type: "PLAYING"
     })
@@ -21,7 +22,7 @@ client.on("ready", message => {
   //// Set the member's roles to a single role
 //  member.user.
 //});
-/*
+
 client.on('interactionCreate', async (commandlistener) => {
   if(!commandlistener.isCommand()){ return;}
   console.log(commandlistener.commandName)
@@ -61,7 +62,7 @@ client.on('interactionCreate', async (commandlistener) => {
 
 
 } )
-*/
+
 
 client.on("messageCreate", async(message) => {
  
